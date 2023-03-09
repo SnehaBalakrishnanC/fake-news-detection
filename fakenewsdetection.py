@@ -18,3 +18,7 @@ from keras.layers import Dense,Embedding,LSTM,Dropout
 
 import warnings
 warnings.filterwarnings('ignore')
+
+
+real_data = pd.read_csv('/content/FakeNewsDataset/True.csv')
+fake_data = pd.read_csv('/content/FakeNewsDataset/Fake.csv')
