@@ -26,3 +26,10 @@ fake_data = pd.read_csv('/content/FakeNewsDataset/Fake.csv')
 real_data.head()
 
 fake_data.head()
+
+real_data['target'] = 1
+fake_data['target'] = 0 
+
+real_data.tail()
+
+fake_data.tail()
