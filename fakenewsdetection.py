@@ -93,3 +93,10 @@ first_text = [ word for word in first_text if not word in set(stopwords.words("e
 
 nltk.download('wordnet')
 nltk.download('omw-1.4')
+
+
+lemma = nltk.WordNetLemmatizer()
+first_text = [ lemma.lemmatize(word) for word in first_text] 
+
+first_text = " ".join(first_text)
+first_text
