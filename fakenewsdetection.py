@@ -61,3 +61,6 @@ del data['title']
 del data['subject']
 del data['date']
 data.head()
+
+first_text = data.text[10]
+first_text
