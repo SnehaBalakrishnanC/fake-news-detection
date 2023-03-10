@@ -145,3 +145,7 @@ from wordcloud import WordCloud,STOPWORDS
 plt.figure(figsize = (15,15))
 wc = WordCloud(max_words = 500 , width = 1000 , height = 500 , stopwords = STOPWORDS).generate(" ".join(data[data.target == 1].text))
 plt.imshow(wc , interpolation = 'bilinear')
+
+plt.figure(figsize = (15,15))
+wc = WordCloud(max_words = 500 , width = 1000 , height = 500 , stopwords = STOPWORDS).generate(" ".join(data[data.target == 0].text))
+plt.imshow(wc , interpolation = 'bilinear')
