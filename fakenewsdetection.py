@@ -172,5 +172,6 @@ def draw_n_gram(string,i):
     plt.figure(figsize = (16,9))
     return sns.barplot(x='count',y='word', data=n_gram_df)
     
-draw_n_gram(string,1)    
+draw_n_gram(string,1)   
+draw_n_gram(string,2) 
     
