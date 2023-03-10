@@ -54,3 +54,10 @@ plt.figure(figsize=(10, 5))
 
 ax = sns.countplot(x="subject",  hue='target', data=data, palette=["red", "green"])
 plt.title("Distribution of The Subject According to Real and Fake Data")
+
+
+data['text']= data['subject'] + " " + data['title'] + " " + data['text']
+del data['title']
+del data['subject']
+del data['date']
+data.head()
