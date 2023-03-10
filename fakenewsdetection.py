@@ -47,3 +47,10 @@ g1.set_ylabel("Count")
 g1.set_xlabel("Target")
 g2 = plt.pie(data["target"].value_counts().values,explode=[0,0],labels=data.target.value_counts().index, autopct='%1.1f%%',colors=['red','green'])
 fig.show()
+
+
+print(data.subject.value_counts())
+plt.figure(figsize=(10, 5))
+
+ax = sns.countplot(x="subject",  hue='target', data=data, palette=["red", "green"])
+plt.title("Distribution of The Subject According to Real and Fake Data")
