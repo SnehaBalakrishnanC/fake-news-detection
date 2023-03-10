@@ -69,6 +69,8 @@ pip install bs4
 
 from bs4 import BeautifulSoup
 
+
+
 soup = BeautifulSoup(first_text, "html.parser")
 first_text = soup.get_text()
 first_text
