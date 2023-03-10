@@ -74,3 +74,9 @@ from bs4 import BeautifulSoup
 soup = BeautifulSoup(first_text, "html.parser")
 first_text = soup.get_text()
 first_text
+
+
+first_text = re.sub('\[[^]]*\]', ' ', first_text)
+first_text = re.sub('[^a-zA-Z]',' ',first_text)  # replaces special characters with spaces
+first_text = first_text.lower() # Converting all from uppercase to lowercase
+first_text
