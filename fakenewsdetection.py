@@ -97,6 +97,8 @@ nltk.download('omw-1.4')
 
 lemma = nltk.WordNetLemmatizer()
 first_text = [ lemma.lemmatize(word) for word in first_text] 
+first_text = " ".join(first_text)
+first_text
 
 
 #Removal of HTML Contents
@@ -136,9 +138,6 @@ def cleaning(text):
 #Apply function on text column
 data['text']=data['text'].apply(cleaning)
 
-first_text = " ".join(first_text)
-first_text
-
 data.head()
 
 from wordcloud import WordCloud,STOPWORDS
@@ -172,3 +171,6 @@ def draw_n_gram(string,i):
     print(n_gram_df.head())
     plt.figure(figsize = (16,9))
     return sns.barplot(x='count',y='word', data=n_gram_df)
+    
+draw_n_gram(string,1)    
+    
