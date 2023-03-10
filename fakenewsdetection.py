@@ -38,3 +38,12 @@ data = pd.concat([real_data, fake_data], ignore_index=True, sort=False)
 data.head()
 
 data.isnull().sum()
+
+print(data["target"].value_counts())
+fig, ax = plt.subplots(1,2, figsize=(19, 5))
+g1 = sns.countplot(data.target, ax=ax[0], palette=["red", "green"])
+g1.set_title("Count of real and fake data")
+g1.set_ylabel("Count")
+g1.set_xlabel("Target")
+g2 = plt.pie(data["target"].value_counts().values,explode=[0,0],labels=data.target.value_counts().index, autopct='%1.1f%%',colors=['red','green'])
+fig.show()
