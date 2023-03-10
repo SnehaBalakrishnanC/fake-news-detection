@@ -90,3 +90,6 @@ from nltk.corpus import stopwords
 first_text = nltk.word_tokenize(first_text)
 
 first_text = [ word for word in first_text if not word in set(stopwords.words("english"))]
+
+nltk.download('wordnet')
+nltk.download('omw-1.4')
