@@ -80,3 +80,11 @@ first_text = re.sub('\[[^]]*\]', ' ', first_text)
 first_text = re.sub('[^a-zA-Z]',' ',first_text)  # replaces special characters with spaces
 first_text = first_text.lower() # Converting all from uppercase to lowercase
 first_text
+
+
+nltk.download("stopwords")
+nltk.download('punkt')
+from nltk.corpus import stopwords  
+
+# we can use tokenizer instead of split
+first_text = nltk.word_tokenize(first_text)
