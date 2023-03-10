@@ -64,3 +64,5 @@ data.head()
 
 first_text = data.text[10]
 first_text
+
+pip install bs4
