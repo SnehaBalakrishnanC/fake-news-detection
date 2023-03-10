@@ -174,4 +174,5 @@ def draw_n_gram(string,i):
     
 draw_n_gram(string,1)   
 draw_n_gram(string,2) 
+draw_n_gram(string,3)
     
