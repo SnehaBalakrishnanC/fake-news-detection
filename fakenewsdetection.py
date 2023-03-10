@@ -140,3 +140,8 @@ first_text = " ".join(first_text)
 first_text
 
 data.head()
+
+from wordcloud import WordCloud,STOPWORDS
+plt.figure(figsize = (15,15))
+wc = WordCloud(max_words = 500 , width = 1000 , height = 500 , stopwords = STOPWORDS).generate(" ".join(data[data.target == 1].text))
+plt.imshow(wc , interpolation = 'bilinear')
