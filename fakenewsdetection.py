@@ -36,3 +36,5 @@ fake_data.tail()
 
 data = pd.concat([real_data, fake_data], ignore_index=True, sort=False)
 data.head()
+
+data.isnull().sum()
