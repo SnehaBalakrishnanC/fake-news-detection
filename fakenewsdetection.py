@@ -159,3 +159,16 @@ ax2.hist(text_len,color='PeachPuff')
 ax2.set_title('Real news text')
 fig.suptitle('Words in texts')
 plt.show()
+
+texts = ' '.join(data['text'])
+
+string = texts.split(" ")
+
+def draw_n_gram(string,i):
+    n_gram = (pd.Series(nltk.ngrams(string, i)).value_counts())[:15]
+    n_gram_df=pd.DataFrame(n_gram)
+    n_gram_df = n_gram_df.reset_index()
+    n_gram_df = n_gram_df.rename(columns={"index": "word", 0: "count"})
+    print(n_gram_df.head())
+    plt.figure(figsize = (16,9))
+    return sns.barplot(x='count',y='word', data=n_gram_df)
