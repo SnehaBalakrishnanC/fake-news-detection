@@ -178,4 +178,5 @@ draw_n_gram(string,3)
 
 X_train, X_test, y_train, y_test = train_test_split(data['text'], data['target'], random_state=0)
 
-    
+max_features = 10000
+maxlen = 300
