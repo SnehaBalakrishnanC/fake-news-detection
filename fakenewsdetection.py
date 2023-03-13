@@ -207,3 +207,6 @@ model.add(LSTM(units=64 , recurrent_dropout = 0.1 , dropout = 0.1))
 model.add(Dense(units = 32 , activation = 'relu'))
 model.add(Dense(1, activation='sigmoid'))
 model.compile(optimizer=keras.optimizers.Adam(lr = 0.01), loss='binary_crossentropy', metrics=['accuracy'])
+
+
+model.summary()
