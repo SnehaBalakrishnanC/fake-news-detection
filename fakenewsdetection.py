@@ -194,3 +194,16 @@ X_test = pad_sequences(tokenized_test, maxlen=maxlen)
 batch_size = 256
 epochs = 10
 embed_size = 100
+
+
+
+
+model = Sequential()
+#Non-trainable embeddidng layer
+model.add(Embedding(max_features, output_dim=embed_size, input_length=maxlen, trainable=False))
+#LSTM 
+model.add(LSTM(units=128 , return_sequences = True , recurrent_dropout = 0.25 , dropout = 0.25))
+model.add(LSTM(units=64 , recurrent_dropout = 0.1 , dropout = 0.1))
+model.add(Dense(units = 32 , activation = 'relu'))
+model.add(Dense(1, activation='sigmoid'))
+model.compile(optimizer=keras.optimizers.Adam(lr = 0.01), loss='binary_crossentropy', metrics=['accuracy'])
