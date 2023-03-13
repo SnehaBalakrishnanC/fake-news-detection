@@ -210,3 +210,6 @@ model.compile(optimizer=keras.optimizers.Adam(lr = 0.01), loss='binary_crossentr
 
 
 model.summary()
+
+history = model.fit(X_train, y_train, validation_split=0.3, epochs=10, batch_size=batch_size, shuffle=True, verbose = 1)
+
