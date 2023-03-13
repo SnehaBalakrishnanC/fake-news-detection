@@ -187,3 +187,6 @@ tokenizer = text.Tokenizer(num_words=max_features)
 tokenizer.fit_on_texts(X_train)
 tokenized_train = tokenizer.texts_to_sequences(X_train)
 X_train = pad_sequences(tokenized_train, maxlen=maxlen)
+
+tokenized_test = tokenizer.texts_to_sequences(X_test)
+X_test = pad_sequences(tokenized_test, maxlen=maxlen)
