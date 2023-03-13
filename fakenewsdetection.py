@@ -180,3 +180,10 @@ X_train, X_test, y_train, y_test = train_test_split(data['text'], data['target']
 
 max_features = 10000
 maxlen = 300
+
+from tensorflow.keras.preprocessing.sequence import pad_sequences
+
+tokenizer = text.Tokenizer(num_words=max_features)
+tokenizer.fit_on_texts(X_train)
+tokenized_train = tokenizer.texts_to_sequences(X_train)
+X_train = pad_sequences(tokenized_train, maxlen=maxlen)
