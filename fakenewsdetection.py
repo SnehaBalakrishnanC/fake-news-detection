@@ -190,3 +190,7 @@ X_train = pad_sequences(tokenized_train, maxlen=maxlen)
 
 tokenized_test = tokenizer.texts_to_sequences(X_test)
 X_test = pad_sequences(tokenized_test, maxlen=maxlen)
+
+batch_size = 256
+epochs = 10
+embed_size = 100
